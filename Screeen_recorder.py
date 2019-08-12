@@ -14,7 +14,7 @@ def record():
     snap = pyautogui.screenshot()
     snaparray = cv2.cvtColor(np.array(snap), cv2.COLOR_RGB2BGR)
     # print(snap)
-    # get info from img
+    # get info from imgage (snaparray)
     height, width, channels = snaparray.shape
     # Define the codec and create VideoWriter object
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
@@ -36,5 +36,4 @@ def record():
 
 ask=input("Hi!\nPress'S' to start recording... ")
 if ask==('s' or 'S'):
-
     record()
